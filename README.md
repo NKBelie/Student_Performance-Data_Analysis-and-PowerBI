@@ -18,4 +18,11 @@ This project aims to analyze the relationship between the number of hours studen
  - To evaluate the strength of correlation between study time and final grades.
  - To visualize the relationship using data dashboards and statistical plots.
  - To provide recommendations that encourage effective study habits for improved academic outcomes.
+   
+# Research Questions
+ > Is there a significant relationship between the number of hours students study and their final grades?
+ > Do students who study more tend to perform better academically?
+ > What is the distribution of study time among students, and how does it align with performance?
+ > Are there other factors (e.g., absences or failures) that moderate the relationship between study time and performance?
+
 
