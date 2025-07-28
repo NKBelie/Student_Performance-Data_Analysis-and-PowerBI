@@ -38,3 +38,5 @@ This project aims to analyze the relationship between the number of hours studen
 # PYTHON ANALYTICS TASKS
 
 # POWER BI DASHBOARD TASKS
+##  Problem and Insights
+This project explores the link between students’ study time and academic performance using the UCI Student Performance dataset. Analysis shows that students who study more tend to score higher in their final grades. Prior grades (G1, G2), internet access, and past failures also play important roles. A machine learning model (Random Forest) predicted final scores with high accuracy (R² ≈ 0.85), and clustering revealed clear student performance groups. These findings can help schools support students based on study habits and risk factors.
