@@ -1,4 +1,10 @@
 # Personal Introduction
+# Personal Introduction
+**Names :** NDAYISABA KAMARIZA Belie<br>
+**ID :** 27174<br>
+**Course:** Introduction to Big Data Analytics<br>
+**Concentration:** Software Engineering
+
 
 # Student Performance Data Analysis and PowerBI
 This dataset contains attributes from two Portuguese secondary schools. It includes information on students’ grades, demographic features, social and school-related features.
@@ -7,9 +13,9 @@ Despite numerous educational interventions, many students continue to underperfo
 
 This project aims to analyze the relationship between the number of hours students study per week (as captured by the studytime variable) and their academic performance (measured by final grades G3). Using the Student Performance dataset from the UCI Machine Learning Repository, we seek to uncover patterns, correlations, and trends that can inform students, educators, and policymakers on how study habits relate to academic success.
 # Project Objectives
--To examine how study time (per week) influences students’ final academic performance.
--To identify trends and patterns in academic achievement based on varying levels of study time.
--To evaluate the strength of correlation between study time and final grades.
--To visualize the relationship using data dashboards and statistical plots.
--To provide recommendations that encourage effective study habits for improved academic outcomes.
+ - To examine how study time (per week) influences students’ final academic performance.
+ - To identify trends and patterns in academic achievement based on varying levels of study time.
+ - To evaluate the strength of correlation between study time and final grades.
+ - To visualize the relationship using data dashboards and statistical plots.
+ - To provide recommendations that encourage effective study habits for improved academic outcomes.
 
