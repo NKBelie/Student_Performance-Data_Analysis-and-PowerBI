@@ -53,6 +53,7 @@ print("\n Portuguese Dataset: G3 Scores by Study Time\n")
 print(por_df.groupby('studytime')['G3'].describe())
 ```
 ![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/G3%20Scores.PNG)
+
 **Visualize distributions and relationships among variables**
 ```
 # Visualize the relationship between study time and final grade (G3) for both datasets
@@ -71,6 +72,7 @@ plt.xlabel("Final Grade (G3)")
 plt.show()
 ```
 ![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/G3%20Por.png)
+
 **Study Time Distribution**
 ```
 mat_df['subject'] = 'Math'
@@ -90,6 +92,7 @@ plt.tight_layout()
 plt.show()
 ```
 ![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/Study%20Time.png)
+
 **Scatter Plot: Study Time vs Final Grade**
 ```
 sns.boxplot(x='studytime', y='G3', data=mat_df)
