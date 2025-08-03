@@ -37,6 +37,178 @@ This project aims to analyze the relationship between the number of hours studen
 
 # PYTHON ANALYTICS TASKS
 
+## Conduct Exploratory Data Analysis (EDA)
+**Generate descriptive statistics**
+```
+print("Math Dataset Summary:\n", mat_df.describe())
+print("\n Portuguese Dataset Summary:\n", por_df.describe())
+```
+![]()
+![]()
+```
+print("Math Dataset: G3 Scores by Study Time\n")
+print(mat_df.groupby('studytime')['G3'].describe())
+
+print("\n Portuguese Dataset: G3 Scores by Study Time\n")
+print(por_df.groupby('studytime')['G3'].describe())
+```
+![]()
+**Visualize distributions and relationships among variables**
+```
+# Visualize the relationship between study time and final grade (G3) for both datasets
+plt.figure(figsize=(12, 6))
+sns.histplot(mat_df['G3'], kde=True, color='blue')
+plt.title("Distribution of Final Grade - Math")
+plt.xlabel("Final Grade (G3)")
+plt.show()
+
+plt.figure(figsize=(12, 6))
+sns.histplot(por_df['G3'], kde=True, color='green')
+plt.title("Distribution of Final Grade - Portuguese")
+plt.xlabel("Final Grade (G3)")
+plt.show()
+```
+![]()
+**Study Time Distribution**
+```
+mat_df['subject'] = 'Math'
+por_df['subject'] = 'Portuguese'
+combined_df = pd.concat([mat_df, por_df], ignore_index=True)
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(10, 6))
+sns.countplot(x='studytime', hue='subject', data=combined_df)
+
+plt.title("Study Time Distribution: Math vs Portuguese")
+plt.xlabel("Study Time Level")
+plt.ylabel("Number of Students")
+plt.legend(title='Subject')
+plt.tight_layout()
+plt.show()
+```
+![]()
+**Scatter Plot: Study Time vs Final Grade**
+```
+sns.boxplot(x='studytime', y='G3', data=mat_df)
+plt.title("Math: Final Grade by Study Time Level")
+plt.xlabel("Study Time Level")
+plt.ylabel("Final Grade")
+plt.show()
+
+sns.boxplot(x='studytime', y='G3', data=por_df, color="darkblue")
+plt.title("Portuguese: Final Grade by Study Time Level")
+plt.xlabel("Study Time Level")
+plt.ylabel("Final Grade")
+plt.show()
+```
+![]()
+![]()
+**Heatmap: Correlation Matrix**
+```
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(12, 6))
+# Create a heatmap with annotations
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f")
+plt.title("Correlation Heatmap - Portuguese Dataset")
+plt.show()
+
+# Plot correlation heatmap
+plt.figure(figsize=(12, 6))
+sns.heatmap(numeric_df.corr(), annot=True, cmap='coolwarm', fmt=".2f")
+
+plt.title("Correlation Heatmap - Math Dataset")
+plt.show()
+```
+![]()
+![]()
+
+# Apply a Machine Learning or Clustering Model
+```
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.cluster import KMeans
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+def run_analysis(dataset_path, subject_name):
+    print(f"\n--- ANALYSIS FOR {subject_name.upper()} ---")
+
+    # Load dataset
+    df = pd.read_csv(dataset_path, sep=';')
+
+    # Features and target for regression
+    features = ['studytime', 'failures', 'absences', 'G1', 'G2']
+    X = df[features]
+    y = df['G3']
+
+    # Split data
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+    # Train regression model
+    reg = LinearRegression()
+    reg.fit(X_train, y_train)
+
+    # Predict & evaluate
+    y_pred = reg.predict(X_test)
+    print(f"Regression Model Performance ({subject_name}):")
+    print(f" - Mean Squared Error: {mean_squared_error(y_test, y_pred):.2f}")
+    print(f" - R-squared: {r2_score(y_test, y_pred):.2f}")
+
+    # Coefficients
+    coef_df = pd.DataFrame({'Feature': features, 'Coefficient': reg.coef_})
+    print("Regression Coefficients:")
+    print(coef_df)
+
+    # Clustering
+    cluster_features = ['studytime', 'G1', 'G2', 'G3']
+    X_cluster = df[cluster_features]
+
+    kmeans = KMeans(n_clusters=3, random_state=42)
+    df['cluster'] = kmeans.fit_predict(X_cluster)
+
+    # Plot clusters
+    plt.figure(figsize=(8,6))
+    sns.scatterplot(data=df, x='studytime', y='G3', hue='cluster', palette='viridis', s=60)
+    plt.title(f'Clusters by Study Time and Final Grade ({subject_name})')
+    plt.xlabel('Study Time')
+    plt.ylabel('Final Grade (G3)')
+    plt.legend(title='Cluster')
+    plt.show()
+
+# Run for Portuguese
+run_analysis('student-por.csv', 'Portuguese')
+
+# Run for Mathematics
+run_analysis('student-mat.csv', 'Mathematics')
+```
+![]()
+![]()
+![]()
+![]()
+```
+from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
+import numpy as np
+
+# Assuming you already have y_test and y_pred from your trained model
+
+# Calculate metrics
+mse = mean_squared_error(y_test, y_pred)
+rmse = np.sqrt(mse)
+mae = mean_absolute_error(y_test, y_pred)
+r2 = r2_score(y_test, y_pred)
+
+print("Model Evaluation Metrics:")
+print(f"Mean Squared Error (MSE): {mse:.2f}")
+print(f"Root Mean Squared Error (RMSE): {rmse:.2f}")
+print(f"Mean Absolute Error (MAE): {mae:.2f}")
+print(f"R-squared (R²): {r2:.2f}")
+```
+![]()
 # POWER BI DASHBOARD TASKS
 ##  Problem and Insights
 This project explores the link between students’ study time and academic performance using the UCI Student Performance dataset. Analysis shows that students who study more tend to score higher in their final grades. Prior grades (G1, G2), internet access, and past failures also play important roles. A machine learning model (Random Forest) predicted final scores with high accuracy (R² ≈ 0.85), and clustering revealed clear student performance groups. These findings can help schools support students based on study habits and risk factors.
