@@ -43,8 +43,8 @@ This project aims to analyze the relationship between the number of hours studen
 print("Math Dataset Summary:\n", mat_df.describe())
 print("\n Portuguese Dataset Summary:\n", por_df.describe())
 ```
-![]()
-![]()
+![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/Math%20Statistic.PNG)
+![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/Por%20Statistics.PNG)
 ```
 print("Math Dataset: G3 Scores by Study Time\n")
 print(mat_df.groupby('studytime')['G3'].describe())
@@ -52,7 +52,7 @@ print(mat_df.groupby('studytime')['G3'].describe())
 print("\n Portuguese Dataset: G3 Scores by Study Time\n")
 print(por_df.groupby('studytime')['G3'].describe())
 ```
-![]()
+![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/G3%20Scores.PNG)
 **Visualize distributions and relationships among variables**
 ```
 # Visualize the relationship between study time and final grade (G3) for both datasets
@@ -61,14 +61,16 @@ sns.histplot(mat_df['G3'], kde=True, color='blue')
 plt.title("Distribution of Final Grade - Math")
 plt.xlabel("Final Grade (G3)")
 plt.show()
-
+```
+![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/G3%20Math.png)
+```
 plt.figure(figsize=(12, 6))
 sns.histplot(por_df['G3'], kde=True, color='green')
 plt.title("Distribution of Final Grade - Portuguese")
 plt.xlabel("Final Grade (G3)")
 plt.show()
 ```
-![]()
+![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/G3%20Por.png)
 **Study Time Distribution**
 ```
 mat_df['subject'] = 'Math'
@@ -87,7 +89,7 @@ plt.legend(title='Subject')
 plt.tight_layout()
 plt.show()
 ```
-![]()
+![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/Study%20Time.png)
 **Scatter Plot: Study Time vs Final Grade**
 ```
 sns.boxplot(x='studytime', y='G3', data=mat_df)
@@ -95,15 +97,17 @@ plt.title("Math: Final Grade by Study Time Level")
 plt.xlabel("Study Time Level")
 plt.ylabel("Final Grade")
 plt.show()
-
+```
+![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/Math%20Final.png)
+```
 sns.boxplot(x='studytime', y='G3', data=por_df, color="darkblue")
 plt.title("Portuguese: Final Grade by Study Time Level")
 plt.xlabel("Study Time Level")
 plt.ylabel("Final Grade")
 plt.show()
 ```
-![]()
-![]()
+![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/por%20Final.png)
+
 **Heatmap: Correlation Matrix**
 ```
 import seaborn as sns
@@ -122,8 +126,8 @@ sns.heatmap(numeric_df.corr(), annot=True, cmap='coolwarm', fmt=".2f")
 plt.title("Correlation Heatmap - Math Dataset")
 plt.show()
 ```
-![]()
-![]()
+![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/Heatmap%20Por.png)
+![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/Heatmap%20Math.png)
 
 # Apply a Machine Learning or Clustering Model
 ```
@@ -186,10 +190,10 @@ run_analysis('student-por.csv', 'Portuguese')
 # Run for Mathematics
 run_analysis('student-mat.csv', 'Mathematics')
 ```
-![]()
-![]()
-![]()
-![]()
+![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/Analyse%20Por.PNG)
+![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/Analyse%20Math.PNG)
+![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/Clusters%20Por.png)
+![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/Clusters%20Math.png)
 ```
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 import numpy as np
@@ -208,7 +212,7 @@ print(f"Root Mean Squared Error (RMSE): {rmse:.2f}")
 print(f"Mean Absolute Error (MAE): {mae:.2f}")
 print(f"R-squared (R²): {r2:.2f}")
 ```
-![]()
+![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/Model.PNG)
 # POWER BI DASHBOARD TASKS
 ##  Problem and Insights
 This project explores the link between students’ study time and academic performance using the UCI Student Performance dataset. Analysis shows that students who study more tend to score higher in their final grades. Prior grades (G1, G2), internet access, and past failures also play important roles. A machine learning model (Random Forest) predicted final scores with high accuracy (R² ≈ 0.85), and clustering revealed clear student performance groups. These findings can help schools support students based on study habits and risk factors.
