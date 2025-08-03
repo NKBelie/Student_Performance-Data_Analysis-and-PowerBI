@@ -244,3 +244,25 @@ This project explores the link between students’ study time and academic perfo
 This Power BI dashboard analyzes student performance across demographics and study habits. It includes interactive filters for sex and school, summary cards showing average grades, and visuals comparing study time, internet access, failures, and higher education aspirations. The report helps identify patterns affecting final grades and supports data-driven decisions to improve student outcomes.
 
 ![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/Dashboard.PNG)
+
+# Conclusion
+This project successfully combined Python analytics and Power BI visualization to explore factors influencing student academic performance. The analysis revealed that study time, internet access, past failures, and future education aspirations are key drivers of final grades.
+
+By applying machine learning models and creating an interactive dashboard, we transformed raw student data into actionable insights. These findings can help educators, policymakers, and institutions implement targeted strategies to support student success and improve learning outcomes.
+
+# Recommendations
+Based on the analysis, these actions are recommended to improve student outcomes:
+ - Encourage consistent study habits: Students with higher study time achieved better grades; structured study plans can help raise performance.
+ - Provide targeted support to students with past failures: Focused tutoring or mentoring can help close performance gaps.
+ - Increase internet access and digital learning resources: Access to online materials correlated with higher achievement.
+ - Promote higher education aspirations: Students who planned to continue education performed better, suggesting that career guidance could boost motivation.
+ - Monitor demographic disparities: Schools and educators should track performance differences by gender and school to ensure equity.
+
+#  Future Work
+Potential extensions of this project include:
+ - Expand analysis to the Math dataset for comparison with Portuguese performance.
+ - Incorporate additional socioeconomic variables (e.g., parental education, household income) to enrich insights.
+ - Develop advanced predictive models, such as Gradient Boosting or Neural Networks, to improve grade prediction accuracy.
+ - Deploy an online interactive dashboard accessible to educators and stakeholders.
+ - Integrate R visuals and What-If Analysis in Power BI to explore interventions and their potential impact.
+
