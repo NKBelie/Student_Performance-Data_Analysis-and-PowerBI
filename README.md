@@ -12,7 +12,7 @@ This dataset contains attributes from two Portuguese secondary schools. It inclu
 
 This project explores student academic performance using data from the UCI Machine Learning Repository. It aims to identify how study time, internet access, past failures, and demographic factors influence final grades. Python was used for data preprocessing and machine learning modeling, while Power BI was used to design an interactive dashboard. The insights generated help educators and stakeholders understand key performance drivers and support data-driven educational improvements.
 
-# PROBLEM DEFINITION & PLANNING
+# PROBLEM DEFINITION AND PLANNING
 ## I. Sector Selection
   - **Education**
 ## II. Problem Statement
