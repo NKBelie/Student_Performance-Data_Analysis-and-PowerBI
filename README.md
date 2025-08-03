@@ -221,7 +221,7 @@ print(f"R-squared (R²): {r2:.2f}")
 ##  Problem and Insights
 This project explores the link between students’ study time and academic performance using the UCI Student Performance dataset. Analysis shows that students who study more tend to score higher in their final grades. Prior grades (G1, G2), internet access, and past failures also play important roles. A machine learning model (Random Forest) predicted final scores with high accuracy (R² ≈ 0.85), and clustering revealed clear student performance groups. These findings can help schools support students based on study habits and risk factors.
 
-**G3 Avarage By Study Time and Schools**
+### G3 Avarage By Study Time and Schools
 
 ![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/1.PNG)
 
