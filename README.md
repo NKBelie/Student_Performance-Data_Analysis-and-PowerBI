@@ -118,7 +118,9 @@ plt.figure(figsize=(12, 6))
 sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f")
 plt.title("Correlation Heatmap - Portuguese Dataset")
 plt.show()
-
+```
+![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/Heatmap%20Por.png)
+```
 # Plot correlation heatmap
 plt.figure(figsize=(12, 6))
 sns.heatmap(numeric_df.corr(), annot=True, cmap='coolwarm', fmt=".2f")
@@ -126,7 +128,6 @@ sns.heatmap(numeric_df.corr(), annot=True, cmap='coolwarm', fmt=".2f")
 plt.title("Correlation Heatmap - Math Dataset")
 plt.show()
 ```
-![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/Heatmap%20Por.png)
 ![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/Heatmap%20Math.png)
 
 # Apply a Machine Learning or Clustering Model
@@ -191,8 +192,8 @@ run_analysis('student-por.csv', 'Portuguese')
 run_analysis('student-mat.csv', 'Mathematics')
 ```
 ![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/Analyse%20Por.PNG)
-![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/Analyse%20Math.PNG)
 ![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/Clusters%20Por.png)
+![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/Analyse%20Math.PNG)
 ![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/Clusters%20Math.png)
 ```
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
