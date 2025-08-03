@@ -15,7 +15,7 @@ This project explores student academic performance using data from the UCI Machi
 # PROBLEM DEFINITION & PLANNING
 ## I. Sector Selection
   - **Education**
-## II. Probleme Statement
+## II. Problem Statement
 
 Despite numerous educational interventions, many students continue to underperform academically, raising concerns about the underlying causes of low academic achievement. Among various factors influencing student success, the amount of time students dedicate to studying is widely considered to have a significant impact. However, the strength and nature of this relationship remain unclear in real-world educational settings.
 
