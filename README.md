@@ -37,8 +37,8 @@ This project aims to analyze the relationship between the number of hours studen
 
 # PYTHON ANALYTICS TASKS
 
-## Conduct Exploratory Data Analysis (EDA)
-**Generate descriptive statistics**
+# Conduct Exploratory Data Analysis (EDA)
+## Generate descriptive statistics
 ```
 print("Math Dataset Summary:\n", mat_df.describe())
 print("\n Portuguese Dataset Summary:\n", por_df.describe())
@@ -54,7 +54,7 @@ print(por_df.groupby('studytime')['G3'].describe())
 ```
 ![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/G3%20Scores.PNG)
 
-**Visualize distributions and relationships among variables**
+## Visualize distributions and relationships among variables
 ```
 # Visualize the relationship between study time and final grade (G3) for both datasets
 plt.figure(figsize=(12, 6))
@@ -73,7 +73,7 @@ plt.show()
 ```
 ![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/G3%20Por.png)
 
-**Study Time Distribution**
+## Study Time Distribution
 ```
 mat_df['subject'] = 'Math'
 por_df['subject'] = 'Portuguese'
@@ -93,7 +93,7 @@ plt.show()
 ```
 ![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/Study%20Time.png)
 
-**Scatter Plot: Study Time vs Final Grade**
+## Scatter Plot: Study Time vs Final Grade
 ```
 sns.boxplot(x='studytime', y='G3', data=mat_df)
 plt.title("Math: Final Grade by Study Time Level")
@@ -111,7 +111,7 @@ plt.show()
 ```
 ![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/por%20Final.png)
 
-**Heatmap: Correlation Matrix**
+## Heatmap: Correlation Matrix
 ```
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -217,6 +217,7 @@ print(f"Mean Absolute Error (MAE): {mae:.2f}")
 print(f"R-squared (R²): {r2:.2f}")
 ```
 ![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/Model.PNG)
+
 # POWER BI DASHBOARD TASKS
 ##  Problem and Insights
 This project explores the link between students’ study time and academic performance using the UCI Student Performance dataset. Analysis shows that students who study more tend to score higher in their final grades. Prior grades (G1, G2), internet access, and past failures also play important roles. A machine learning model (Random Forest) predicted final scores with high accuracy (R² ≈ 0.85), and clustering revealed clear student performance groups. These findings can help schools support students based on study habits and risk factors.
@@ -239,5 +240,7 @@ This project explores the link between students’ study time and academic perfo
 ![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/6.PNG)
 
 ## Student Performance Dashboard
+
+This Power BI dashboard analyzes student performance across demographics and study habits. It includes interactive filters for sex and school, summary cards showing average grades, and visuals comparing study time, internet access, failures, and higher education aspirations. The report helps identify patterns affecting final grades and supports data-driven decisions to improve student outcomes.
 
 ![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/Dashboard.PNG)
