@@ -8,14 +8,21 @@
 # Student Performance Data Analysis and PowerBI
 This dataset contains attributes from two Portuguese secondary schools. It includes information on students’ grades, demographic features, social and school-related features.
 
+# Introduction
+
+This project explores student academic performance using data from the UCI Machine Learning Repository. It aims to identify how study time, internet access, past failures, and demographic factors influence final grades. Python was used for data preprocessing and machine learning modeling, while Power BI was used to design an interactive dashboard. The insights generated help educators and stakeholders understand key performance drivers and support data-driven educational improvements.
+
 # PROBLEM DEFINITION & PLANNING
 ## I. Sector Selection
   - **Education**
 ## II. Probleme Statement
+
 Despite numerous educational interventions, many students continue to underperform academically, raising concerns about the underlying causes of low academic achievement. Among various factors influencing student success, the amount of time students dedicate to studying is widely considered to have a significant impact. However, the strength and nature of this relationship remain unclear in real-world educational settings.
 
 This project aims to analyze the relationship between the number of hours students study per week (as captured by the studytime variable) and their academic performance (measured by final grades G3). Using the Student Performance dataset from the UCI Machine Learning Repository, we seek to uncover patterns, correlations, and trends that can inform students, educators, and policymakers on how study habits relate to academic success.
+
 ### Project Objectives
+
  - To examine how study time (per week) influences students’ final academic performance.
  - To identify trends and patterns in academic achievement based on varying levels of study time.
  - To evaluate the strength of correlation between study time and final grades.
@@ -23,12 +30,14 @@ This project aims to analyze the relationship between the number of hours studen
  - To provide recommendations that encourage effective study habits for improved academic outcomes.
    
 ### Research Questions
+
  - Is there a significant relationship between the number of hours students study and their final grades?
  - Do students who study more tend to perform better academically?
  - What is the distribution of study time among students, and how does it align with performance?
  - Are there other factors (e.g., absences or failures) that moderate the relationship between study time and performance?
 
 ## III. Dataset Identification
+
   - **Dataset Title:** Student Performance Data Set
   - **Source Link:**[Dataset Source](https://archive.ics.uci.edu/dataset/320/student+performance)
   - **Number of Rows and Columns**:649 rows × 33 columns
@@ -246,11 +255,13 @@ This Power BI dashboard analyzes student performance across demographics and stu
 ![](https://github.com/NKBelie/Student_Performance-Data_Analysis-and-PowerBI/blob/main/Image/Dashboard.PNG)
 
 # Conclusion
+
 This project successfully combined Python analytics and Power BI visualization to explore factors influencing student academic performance. The analysis revealed that study time, internet access, past failures, and future education aspirations are key drivers of final grades.
 
 By applying machine learning models and creating an interactive dashboard, we transformed raw student data into actionable insights. These findings can help educators, policymakers, and institutions implement targeted strategies to support student success and improve learning outcomes.
 
 # Recommendations
+
 Based on the analysis, these actions are recommended to improve student outcomes:
  - Encourage consistent study habits: Students with higher study time achieved better grades; structured study plans can help raise performance.
  - Provide targeted support to students with past failures: Focused tutoring or mentoring can help close performance gaps.
@@ -259,6 +270,7 @@ Based on the analysis, these actions are recommended to improve student outcomes
  - Monitor demographic disparities: Schools and educators should track performance differences by gender and school to ensure equity.
 
 #  Future Work
+
 Potential extensions of this project include:
  - Expand analysis to the Math dataset for comparison with Portuguese performance.
  - Incorporate additional socioeconomic variables (e.g., parental education, household income) to enrich insights.
